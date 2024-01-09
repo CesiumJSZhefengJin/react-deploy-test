@@ -1,38 +1,26 @@
 {
-  "name": "react-docker-gcp",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.3",
-    "@testing-library/user-event": "^12.6.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.1",
-    "web-vitals": "^0.2.4"
-  },
+  "name": "siros-web",
+  "version": "3.1.3.78",
+  "description": "global evaluation tool that compresses the time cycle of the historical evaluation process for the energy industry from days or weeks to seconds or minutes.",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "npx nodemon ./api/server.ts",
+    "client": "npm start --prefix client",
+    "client-install": "npm i --prefix client",
+    "api-install": "npm i --prefix api",
+    "install-all": "concurrently \"npm run client-install\" \"npm run api-install\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "https://sirostechnologies@dev.azure.com/sirostechnologies/Siros-Web/_git/Siros-Web"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "ts-node": "^10.9.1"
   }
 }
